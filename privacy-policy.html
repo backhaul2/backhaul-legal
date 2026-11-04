@@ -12,13 +12,17 @@ h1{font-size:1.8rem} h2{font-size:1.2rem;margin-top:2rem}
 </head>
 <body>
 <h1>Backhaul Privacy Policy</h1>
-<p><strong>Last updated:</strong> October 30, 2026</p>
+<p><strong>Last updated:</strong> November 4, 2026</p>
 <p>Backhaul (“the app”) is operated by Northgrey Enterprises Inc. (“we”, “us”). Backhaul connects shippers who post loads with carriers who make offers on them. This policy explains what information we collect, how we use it, and the choices you have.</p>
 <h2>1. Information we collect</h2>
 <p><strong>Account information:</strong> your name, email address, phone number, company name, and whether you use Backhaul as a shipper, a carrier, or both.</p>
-<p><strong>Load and offer information:</strong> for loads you post, the pickup and delivery addresses and business names, cargo details (description, weight, dimensions, piece count), pickup and delivery timing, loading and access notes, and acceptable vehicle types. For offers you make as a carrier, the price (flat, hourly, or per-kilometre), your pickup availability, your estimated delivery time, and any message you add.</p>
-<p><strong>Location information:</strong> the pickup and delivery addresses you enter. We convert these to map coordinates and estimate the route distance.</p>
+<p><strong>Load and offer information:</strong> for loads you post, the pickup and delivery addresses and business names, cargo details (description, weight, dimensions, piece count), pickup and delivery timing, loading and access notes, and acceptable vehicle types. For trailer moves, the trailer type, length, weight, whether it is loaded, the hitch and ball size, and whether its lights and brakes work. For livestock loads, the type of animal, number of head, approximate weight, and whether loading chutes are available. If you choose to repeat a load, the days of the week it should be posted again. For offers you make as a carrier, the price (flat, hourly, or per-kilometre), your pickup availability, your estimated delivery time, and any message you add.</p>
+<p><strong>Location information:</strong> the pickup and delivery addresses you enter, and the base location a carrier chooses to save. We convert these to map coordinates, estimate the route distance, and use a carrier’s base location to show nearby loads first and to send alerts for loads within the distance they choose.</p>
 <p><strong>Delivery proof:</strong> when a carrier records a pickup or delivery, we collect any photo, signature, recipient name, and note they add, along with the time it was recorded.</p>
+<p><strong>Messages:</strong> once a load is booked, the shipper and the selected carrier can message each other in the app. We store those messages and when each person last read them.</p>
+<p><strong>Carrier credentials:</strong> if you are a carrier, the CVOR number, cargo insurance company, and insurance expiry date you choose to enter.</p>
+<p><strong>Invoice information:</strong> if you are a carrier and create invoices in Backhaul, your business mailing address, HST/GST number, and tax rate, and for each invoice its number, amount, tax, date, and whether you have marked it paid. Invoice PDFs and QuickBooks export files are created on your phone and shared only where you choose to send them.</p>
+<p><strong>Reports:</strong> if you report a user, load, offer, or review, we collect the reason, any details you add, and what you reported.</p>
 <p><strong>Ratings and comments:</strong> after a delivery, a shipper can rate the carrier (punctuality, price accuracy, and reliability) and leave comments.</p>
 <p><strong>Device and usage information:</strong> a push notification token, device type, operating system, app version, and diagnostic or crash data.</p>
 <p><strong>Subscription information:</strong> Backhaul requires a paid subscription. Subscriptions are purchased and billed through Google Play. Google processes your payment, and we do not receive or store your payment card number. We receive your subscription status, plan, purchase and renewal dates, and a transaction identifier.</p>
@@ -28,21 +32,27 @@ h1{font-size:1.8rem} h2{font-size:1.2rem;margin-top:2rem}
 <li>To create and manage your account and authenticate you</li>
 <li>To let shippers post loads and carriers receive notifications and make offers</li>
 <li>To let shippers compare offers and select a carrier</li>
+<li>To let the shipper and the booked carrier message each other</li>
 <li>To record pickups and deliveries and show carrier ratings</li>
+<li>To close loads automatically once their pickup date has passed without a booking</li>
+<li>To post your repeating loads again on the days you choose</li>
+<li>To let carriers create numbered invoices for delivered loads and track whether they have been paid</li>
+<li>To review reports and act on accounts or content that break our Terms of Service</li>
 <li>To manage your subscription, verify that it is active, and handle billing questions and refunds</li>
 <li>To send notifications about loads, offers, and account activity</li>
 <li>To provide support, prevent fraud and abuse, and keep the app secure</li>
 <li>To improve and troubleshoot the app</li>
 </ul>
 <h2>3. How information is shared</h2>
-<p><strong>With other users:</strong> when you post a load, carriers can see its details. When a carrier makes an offer, the shipper can see the offer and the carrier’s profile and ratings. Once a shipper selects an offer, the shipper and the selected carrier can see each other’s contact details and the delivery proof so they can complete the shipment.</p>
+<p><strong>With other users:</strong> when you post a load, carriers can see its details. When a carrier makes an offer, the shipper can see the offer and the carrier’s profile and ratings. A carrier’s CVOR number and insurance details are shown to shippers who receive that carrier’s offers. Once a shipper selects an offer, the shipper and the selected carrier can see each other’s contact details, their messages to each other, and the delivery proof so they can complete the shipment. The carrier also sees the shipper’s billing email (or, if none is set, the email address the shipper signs in with) so they can send an invoice, and the shipper sees the carrier’s invoice number, amount, and paid status for that load.</p>
+<p>When you report something, the Backhaul team receives the report. The person you reported is not told who reported them.</p>
 <p>Backhaul does not process freight payments. Payment for a shipment is arranged directly between the shipper and the carrier.</p>
-<p><strong>With service providers</strong> who help us run the app, such as hosting, database, and file storage (Supabase), push notifications (Expo and Google Firebase Cloud Messaging), and subscription management (Google Play and RevenueCat). They may only use your information to provide services to us.</p>
+<p><strong>With service providers</strong> who help us run the app, such as hosting, database, and file storage (Supabase), push notifications (Expo and Google Firebase Cloud Messaging), address search and maps (Google Maps Platform, Esri, and OpenStreetMap, which receive the addresses or map areas you look up), and subscription management (Google Play and RevenueCat). They may only use your information to provide services to us.</p>
 <p><strong>For legal reasons:</strong> if required by law, or to protect the rights, safety, and security of our users or the public.</p>
 <p>We do not sell your personal information.</p>
 <h2>4. Data retention and account deletion</h2>
-<p>We keep your information while your account is active. You can delete your account in the app at any time. When you do, we immediately remove your personal details (name, phone number, company name, and email address or login), your notifications and device tokens, loads you posted that were never booked, and offers that were not accepted.</p>
-<p>Records that another user also depends on, such as delivered loads, accepted offers, ratings, and delivery proof, are kept for that other user’s records and for dispute resolution. They are kept for 7 years, are no longer linked to your name or contact details, and appear under “Deleted user”. Your private rating comments are deleted. You cannot delete your account while you have booked or in-transit loads.</p>
+<p>We keep your information while your account is active. You can delete your account in the app at any time. When you do, we immediately remove your personal details (name, phone number, company name, email address or login, base location, and CVOR and insurance details), your notifications and device tokens, loads you posted that were never booked, and offers that were not accepted.</p>
+<p>Records that another user also depends on, such as delivered loads, accepted offers, messages on booked loads, ratings, and delivery proof, are kept for that other user’s records and for dispute resolution. They are kept for 7 years, are no longer linked to your name or contact details, and appear under “Deleted user”. Your private rating comments are deleted. You cannot delete your account while you have booked or in-transit loads.</p>
 <h2>5. Your choices and rights</h2>
 <ul>
 <li>You can view and update your profile information in the app.</li>
