@@ -80,3 +80,5 @@ footer.site{border-top:1px solid var(--line);padding:36px 0 48px;font-size:14.5p
 footer.site .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:flex-start}
 footer.site a{color:var(--muted);text-decoration:none;margin-right:18px;display:inline-block}
 footer.site a:hover{color:var(--ink);text-decoration:underline}
+
+nav.site a.nav-signin{color:#fff;padding:8px 16px;border-radius:10px;font-size:15px}
