@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email alerts off — Backhaul</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#073D4B">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><span class="mark" aria-hidden="true">B</span>backhaul</a>
+  <nav class="site" aria-label="Main"><a href="/support/">Support</a><a class="btn nav-signin" href="/app/">Sign in</a></nav>
+</div></header>
+<main class="legal" style="margin:0 auto">
+  <div id="ok">
+    <h1>Email alerts are off</h1>
+    <p>You won't get Backhaul alerts by email any more. You can still see every alert in the app under Notifications.</p>
+    <p>Changed your mind? Sign in and go to <b>Account › Notifications</b> to turn email alerts back on.</p>
+  </div>
+  <div id="bad" hidden>
+    <h1>That link didn't work</h1>
+    <p>Sign in and go to <b>Account › Notifications</b> to turn off email alerts there.</p>
+  </div>
+  <p><a class="btn" href="/app/">Open Backhaul</a></p>
+</main>
+<script>
+  if (/[?&]error=/.test(location.search)) { document.getElementById('ok').hidden = true; document.getElementById('bad').hidden = false; }
+</script>
+</body>
+</html>
