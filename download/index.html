@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Backhaul</title>
+<meta name="description" content="Get Backhaul, the Ontario freight marketplace. Install it on Android, or use it in your browser on iPhone and computer. Free while we launch.">
+<link rel="canonical" href="https://backhaulapp.ca/download/">
+<meta property="og:title" content="Get Backhaul — Ontario freight, matched">
+<meta property="og:description" content="Post loads, send offers, book, track and invoice. Free while we launch.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://backhaulapp.ca/download/">
+<meta property="og:image" content="https://backhaulapp.ca/assets/og-image.png">
+<meta name="theme-color" content="#073D4B">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+  @media (max-width:900px){.platforms{grid-template-columns:1fr}}
+  .platform{display:flex;flex-direction:column;gap:14px}
+  .platform.mine{border:2px solid var(--teal);box-shadow:0 8px 28px color-mix(in srgb,var(--teal) 16%,transparent)}
+  .platform h2{font-size:24px;margin:0;letter-spacing:-.4px}
+  .platform p{margin:0;color:var(--muted);font-size:16px}
+  .platform .btn{text-align:center}
+  .here{display:none;align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--teal);background:var(--tint);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+  .platform.mine .here{display:inline-block}
+  ol.how{margin:4px 0 0;padding-left:22px;display:grid;gap:8px;font-size:16px}
+  ol.how li::marker{color:var(--teal);font-weight:800}
+  .fine{font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><span class="mark" aria-hidden="true">B</span>backhaul</a>
+  <nav class="site" aria-label="Main">
+    <a class="hide-sm" href="/#how">How it works</a>
+    <a class="hide-sm" href="/support/">Support</a>
+    <a class="btn nav-signin" href="/app/">Sign in</a>
+  </nav>
+</div></header>
+
+<main id="main" class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Free while we launch</span>
+    <h1>Get Backhaul</h1>
+    <p class="lead" style="margin-bottom:0">Install it on your Android phone, or use it in your browser on an iPhone or computer. One account works everywhere.</p>
+  </div>
+
+  <section style="padding:24px 0 72px">
+    <div class="platforms">
+      <div class="card platform" id="android">
+        <span class="here">Your phone</span>
+        <h2>Android</h2>
+        <p>The full app, with alerts when a load is posted near you.</p>
+        <a class="btn" href="https://expo.dev/artifacts/eas/zoPMiwR4YGGGwALQlmiQyztJRodJHNp_kvGas-EUkvk.apk">Download for Android</a>
+        <ol class="how">
+          <li>Tap <b>Download for Android</b>. If you opened this link in WhatsApp, tap <b>⋮</b> and choose <b>Open in Chrome</b> first.</li>
+          <li>When the download finishes, tap <b>Open</b>.</li>
+          <li>If your phone asks, tap <b>Settings</b>, turn on <b>Allow from this source</b>, then go back.</li>
+          <li>Tap <b>Install</b>. If a warning says the app is from an unknown developer, tap <b>More details</b>, then <b>Install anyway</b>.</li>
+          <li>Open Backhaul and create your account.</li>
+        </ol>
+        <p class="fine">Updates arrive by themselves. The app will also be on Google Play soon.</p>
+      </div>
+
+      <div class="card platform" id="iphone">
+        <span class="here">Your phone</span>
+        <h2>iPhone</h2>
+        <p>The iPhone app is coming to the App Store. Until then, use Backhaul in Safari. It does everything the app does except phone alerts.</p>
+        <a class="btn" href="/app/">Open Backhaul</a>
+        <ol class="how">
+          <li>Tap <b>Open Backhaul</b> and create your account.</li>
+          <li>To keep it on your home screen, tap the <b>Share</b> button, then <b>Add to Home Screen</b>.</li>
+        </ol>
+      </div>
+
+      <div class="card platform" id="computer">
+        <span class="here">This computer</span>
+        <h2>Computer</h2>
+        <p>Post and manage loads, read messages and send invoices on a bigger screen.</p>
+        <a class="btn" href="/app/">Open Backhaul in your browser</a>
+        <p class="fine">Works in Chrome, Edge, Safari and Firefox. Sign in with the same account you use on your phone.</p>
+      </div>
+    </div>
+
+    <p class="fine" style="margin-top:28px">Need help installing? See <a href="/support/">Support</a>.</p>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div>
+    <strong style="color:var(--ink)">Backhaul</strong> by Northgrey Enterprises Inc.<br>
+    Markdale, Ontario, Canada<br>© 2026 Northgrey Enterprises Inc.
+  </div>
+  <div>
+    <a href="/support/">Support</a><a href="/privacy-policy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/delete-account.html">Delete account</a>
+  </div>
+</div></footer>
+<script>
+  // Put the visitor's own device first and mark it.
+  (function () {
+    var ua = navigator.userAgent || '';
+    var id = /android/i.test(ua) ? 'android' : (/iphone|ipad|ipod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) ? 'iphone' : 'computer';
+    var card = document.getElementById(id);
+    if (!card) return;
+    card.classList.add('mine');
+    card.parentNode.insertBefore(card, card.parentNode.firstChild);
+  })();
+</script>
+</body>
+</html>
