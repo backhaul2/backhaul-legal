@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Email alerts off — Backhaul</title>
+<title>Email alerts — Backhaul</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#073D4B">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -15,7 +15,13 @@
   <nav class="site" aria-label="Main"><a href="/support/">Support</a><a class="btn nav-signin" href="/app/">Sign in</a></nav>
 </div></header>
 <main class="legal" style="margin:0 auto">
-  <div id="ok">
+  <div id="ask" hidden>
+    <h1>Turn off Backhaul alert emails?</h1>
+    <p>You'll stop getting alerts by email, such as new loads, offers and messages. You can still see every alert in the app under Notifications.</p>
+    <p><button class="btn" id="confirm" type="button">Turn off alert emails</button></p>
+    <p id="err" hidden>That didn't work. Check your connection and try again, or sign in and go to <b>Account › Notifications</b>.</p>
+  </div>
+  <div id="ok" hidden>
     <h1>Email alerts are off</h1>
     <p>You won't get Backhaul alerts by email any more. You can still see every alert in the app under Notifications.</p>
     <p>Changed your mind? Sign in and go to <b>Account › Notifications</b> to turn email alerts back on.</p>
@@ -27,7 +33,19 @@
   <p><a class="btn" href="/app/">Open Backhaul</a></p>
 </main>
 <script>
-  if (/[?&]error=/.test(location.search)) { document.getElementById('ok').hidden = true; document.getElementById('bad').hidden = false; }
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var u = q.get('u'), t = q.get('t');
+    function show(id) { ['ask', 'ok', 'bad'].forEach(function (x) { document.getElementById(x).hidden = x !== id; }); }
+    if (q.get('error') || !u || !t) { show('bad'); return; }
+    show('ask');
+    document.getElementById('confirm').addEventListener('click', function () {
+      var btn = this; btn.disabled = true; btn.textContent = 'Turning off…';
+      fetch('https://mvwykrfffwvkhhevhsmk.supabase.co/functions/v1/email-alerts-off?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), { method: 'POST' })
+        .then(function (r) { if (!r.ok) throw new Error(); show('ok'); history.replaceState(null, '', location.pathname); })
+        .catch(function () { btn.disabled = false; btn.textContent = 'Turn off alert emails'; document.getElementById('err').hidden = false; });
+    });
+  })();
 </script>
 </body>
 </html>
